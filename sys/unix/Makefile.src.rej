@@ -1,0 +1,38 @@
+***************
+*** 151,158 ****
+  # flags for debugging:
+  # CFLAGS = -g -I../include
+  
+- CFLAGS = -O -I../include
+- LFLAGS = 
+  
+  # The Qt and Be window systems are written in C++, while the rest of
+  # NetHack is standard C.  If using Qt, uncomment the LINK line here to get
+--- 151,158 ----
+  # flags for debugging:
+  # CFLAGS = -g -I../include
+  
++ #CFLAGS = -O -I../include
++ #LFLAGS = 
+  
+  # The Qt and Be window systems are written in C++, while the rest of
+  # NetHack is standard C.  If using Qt, uncomment the LINK line here to get
+***************
+*** 230,237 ****
+  # WINTTYLIB = -ltermcap
+  # WINTTYLIB = -lcurses
+  # WINTTYLIB = -lcurses16
+- # WINTTYLIB = -lncurses
+- WINTTYLIB = -ltermlib
+  #
+  # libraries for X11
+  # If USE_XPM is defined in config.h, you will also need -lXpm here.
+--- 230,237 ----
+  # WINTTYLIB = -ltermcap
+  # WINTTYLIB = -lcurses
+  # WINTTYLIB = -lcurses16
++ WINTTYLIB = -lncurses
++ #WINTTYLIB = -ltermlib
+  #
+  # libraries for X11
+  # If USE_XPM is defined in config.h, you will also need -lXpm here.
