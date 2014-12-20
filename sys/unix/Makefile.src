@@ -62,7 +62,7 @@ SYSOBJ = ioctl.o unixmain.o unixtty.o unixunix.o unixres.o recover.o
 #		a non-ANSI <sys/ioctl.h> -- either run fixincludes on it or use
 #		-traditional in CFLAGS
 # CC = gcc
-#
+CC = clang
 #	For Bull DPX/2 systems at B.O.S. 2.0 or higher use the following:
 #
 # CC = gcc -ansi -D_BULL_SOURCE -D_XOPEN_SOURCE -D_POSIX_SOURCE
@@ -158,7 +158,7 @@ LFLAGS =
 # NetHack is standard C.  If using Qt, uncomment the LINK line here to get
 # the C++ libraries linked in.
 CXXFLAGS = $(CFLAGS) -I. -I$(QTDIR)/include
-CXX=g++
+CXX=clang++
 #LINK=g++
 #	For cross-compiling, eg. with gcc on Linux (see also CC further up):
 #CXX=arm-linux-g++
