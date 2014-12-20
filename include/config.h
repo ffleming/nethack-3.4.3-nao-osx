@@ -214,7 +214,7 @@
  * otherwise it will be the current directory.
  */
 # ifndef HACKDIR
-#  define HACKDIR "/nethack"
+#  define HACKDIR "/opt/nethack"
 # endif
 
 /*
