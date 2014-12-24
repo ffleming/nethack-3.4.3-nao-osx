@@ -43,7 +43,7 @@ New changes
 
 The patch
 ---
-Created with `diff --exclude=.git* -rupN nh-original nethack-3.4.3.patched > nethack-3.4.3-nao-osx.patch`
+Created with `diff --exclude=.git* --exclude=*.diff --exclude=*.patch -rupN "$VANILLA_DIR/" "$PATCHED_DIR/" > "$PATCH_FILENAME"`
 
 Changes implemented by NAO
 ---
