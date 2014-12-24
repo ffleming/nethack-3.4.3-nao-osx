@@ -186,6 +186,10 @@
 #define COMPRESS_EXTENSION ".gz"		/* normal gzip extension */
 #endif
 
+#ifdef __APPLE__
+#define COMPRESS "/usr/bin/compress"
+#endif
+
 #ifndef COMPRESS
 # define INTERNAL_COMP	/* control use of NetHack's compression routines */
 #endif
