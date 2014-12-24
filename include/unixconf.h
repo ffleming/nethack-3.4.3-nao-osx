@@ -102,7 +102,7 @@
  * If you want the static parts of your playground on a read-only file
  * system, define VAR_PLAYGROUND to be where the variable parts are kept.
  */
-#define VAR_PLAYGROUND "/usr/local/Cellar/nethack/3.4.3/libexec"
+#define VAR_PLAYGROUND "/opt/nethack/var"
 
 
 /*
