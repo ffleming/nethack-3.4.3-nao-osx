@@ -1,4 +1,4 @@
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/README.gray nethack-3.4.3-nao-osx/README.gray
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/README.gray nethack-3.4.3-nao-osx/README.gray
 --- nethack-3.4.3/README.gray	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/README.gray	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,42 @@
@@ -44,9 +44,9 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +to be consistent with the rest of nethack. :)
 +
 +---- Michael Deutschmann <michael@talamasca.ocis.net>
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/README.md nethack-3.4.3-nao-osx/README.md
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/README.md nethack-3.4.3-nao-osx/README.md
 --- nethack-3.4.3/README.md	1969-12-31 16:00:00.000000000 -0800
-+++ nethack-3.4.3-nao-osx/README.md	2014-12-20 13:54:44.000000000 -0800
++++ nethack-3.4.3-nao-osx/README.md	2014-12-24 10:51:35.000000000 -0800
 @@ -0,0 +1,153 @@
 +NetHack 3.4.3, NAO version, for OSX
 +===
@@ -93,7 +93,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +
 +The patch
 +---
-+Created with `diff --exclude=.git* -rupN nh-original nethack-3.4.3.patched > nethack-3.4.3-nao-osx.patch`
++Created with `diff --exclude=.git* --exclude=*.diff --exclude=*.patch -rupN "$VANILLA_DIR/" "$PATCHED_DIR/" > "$PATCH_FILENAME"`
 +
 +Changes implemented by NAO
 +---
@@ -201,7 +201,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +* Fix stat abuse of gauntlets of dexterity and helm of brilliance (by Alex Smith)
 +* Multiple possible bones files per level (via UnNetHack)
 +</ul>
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/README.menucolor nethack-3.4.3-nao-osx/README.menucolor
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/README.menucolor nethack-3.4.3-nao-osx/README.menucolor
 --- nethack-3.4.3/README.menucolor	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/README.menucolor	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,106 @@
@@ -311,7 +311,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +--
 + Pasi Kallinen
 + paxed@alt.org
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/dat/cmdhelp nethack-3.4.3-nao-osx/dat/cmdhelp
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/dat/cmdhelp nethack-3.4.3-nao-osx/dat/cmdhelp
 --- nethack-3.4.3/dat/cmdhelp	2003-12-07 15:39:12.000000000 -0800
 +++ nethack-3.4.3-nao-osx/dat/cmdhelp	2014-12-20 12:08:36.000000000 -0800
 @@ -69,7 +69,7 @@ V       Show long version and game histo
@@ -323,7 +323,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  y       Go northwest 1 space
  Y       Go northwest until you are on top of something
  ^Y      Go northwest until you are near something
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/dat/help nethack-3.4.3-nao-osx/dat/help
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/dat/help nethack-3.4.3-nao-osx/dat/help
 --- nethack-3.4.3/dat/help	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/dat/help	2014-12-20 12:08:36.000000000 -0800
 @@ -141,7 +141,7 @@ Commands:
@@ -335,7 +335,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
          ^X      Show your attributes.
          z       Zap a wand.
          Z       Cast a spell.
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/dat/hh nethack-3.4.3-nao-osx/dat/hh
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/dat/hh nethack-3.4.3-nao-osx/dat/hh
 --- nethack-3.4.3/dat/hh	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/dat/hh	2014-12-20 12:08:36.000000000 -0800
 @@ -26,7 +26,7 @@ O       options set options
@@ -347,7 +347,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  ^A      again   redo the previous command (^A denotes the keystroke CTRL-A)
  ^R      redraw  redraw the screen
  ^P      prevmsg repeat previous message (subsequent ^P's repeat earlier ones)
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/dat/opthelp nethack-3.4.3-nao-osx/dat/opthelp
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/dat/opthelp nethack-3.4.3-nao-osx/dat/opthelp
 --- nethack-3.4.3/dat/opthelp	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/dat/opthelp	2014-12-20 12:08:36.000000000 -0800
 @@ -25,9 +25,13 @@ null           allow nulls to be sent to
@@ -416,7 +416,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  suppress_alert disable various version-specific warnings about changes
                in game play or the user interface, such as notification given
                for the 'Q' command that quitting is now done via #quit
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/dat/wizhelp nethack-3.4.3-nao-osx/dat/wizhelp
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/dat/wizhelp nethack-3.4.3-nao-osx/dat/wizhelp
 --- nethack-3.4.3/dat/wizhelp	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/dat/wizhelp	2014-12-20 12:08:36.000000000 -0800
 @@ -16,6 +16,7 @@ Debug-Mode Quick Reference:
@@ -427,7 +427,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #stats == show memory statistics
  #timeout == look at timeout queue
  #vision == show vision array
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/doc/Guidebook.mn nethack-3.4.3-nao-osx/doc/Guidebook.mn
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/doc/Guidebook.mn nethack-3.4.3-nao-osx/doc/Guidebook.mn
 --- nethack-3.4.3/doc/Guidebook.mn	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/doc/Guidebook.mn	2014-12-20 12:08:36.000000000 -0800
 @@ -1770,6 +1770,12 @@ traps and each other as well as by you.
@@ -498,7 +498,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  .hn 2
  Window Port Customization options
  .pg
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/doc/Guidebook.tex nethack-3.4.3-nao-osx/doc/Guidebook.tex
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/doc/Guidebook.tex nethack-3.4.3-nao-osx/doc/Guidebook.tex
 --- nethack-3.4.3/doc/Guidebook.tex	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/doc/Guidebook.tex	2014-12-20 12:08:36.000000000 -0800
 @@ -2209,6 +2209,13 @@ traps and each other as well as by you. 
@@ -578,7 +578,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  \elist
  
  %.hn 2
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/doc/Guidebook.txt nethack-3.4.3-nao-osx/doc/Guidebook.txt
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/doc/Guidebook.txt nethack-3.4.3-nao-osx/doc/Guidebook.txt
 --- nethack-3.4.3/doc/Guidebook.txt	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/doc/Guidebook.txt	2014-12-20 12:08:36.000000000 -0800
 @@ -2274,6 +2274,13 @@
@@ -656,7 +656,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
            9.5.  Window Port Customization options
  
                 Here are explanations of the various options that  are  used
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/doc/window.doc nethack-3.4.3-nao-osx/doc/window.doc
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/doc/window.doc nethack-3.4.3-nao-osx/doc/window.doc
 --- nethack-3.4.3/doc/window.doc	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/doc/window.doc	2014-12-20 12:08:36.000000000 -0800
 @@ -518,6 +518,9 @@ to support:
@@ -687,7 +687,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  windowcolors
  		-- port should use these colors for window foreground/background
  		   colors.  Syntax:
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/color.h nethack-3.4.3-nao-osx/include/color.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/color.h nethack-3.4.3-nao-osx/include/color.h
 --- nethack-3.4.3/include/color.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/color.h	2014-12-20 12:08:36.000000000 -0800
 @@ -5,6 +5,12 @@
@@ -751,7 +751,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +
 +
  #endif /* COLOR_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/config.h nethack-3.4.3-nao-osx/include/config.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/config.h nethack-3.4.3-nao-osx/include/config.h
 --- nethack-3.4.3/include/config.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/config.h	2014-12-24 10:44:10.000000000 -0800
 @@ -43,11 +43,21 @@
@@ -924,7 +924,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  /* End of Section 5 */
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/decl.h nethack-3.4.3-nao-osx/include/decl.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/decl.h nethack-3.4.3-nao-osx/include/decl.h
 --- nethack-3.4.3/include/decl.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/decl.h	2014-12-20 12:08:36.000000000 -0800
 @@ -26,7 +26,12 @@ E char SAVEP[];
@@ -1079,7 +1079,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #undef E
  
  #endif /* DECL_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/dungeon.h nethack-3.4.3-nao-osx/include/dungeon.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/dungeon.h nethack-3.4.3-nao-osx/include/dungeon.h
 --- nethack-3.4.3/include/dungeon.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/dungeon.h	2014-12-20 12:08:36.000000000 -0800
 @@ -121,8 +121,13 @@ typedef struct branch {
@@ -1104,7 +1104,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  /*
   * Note:  VISITED and LFILE_EXISTS are currently almost always set at the
   * same time.  However they _mean_ different things.
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/extern.h nethack-3.4.3-nao-osx/include/extern.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/extern.h nethack-3.4.3-nao-osx/include/extern.h
 --- nethack-3.4.3/include/extern.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/extern.h	2014-12-20 12:08:36.000000000 -0800
 @@ -25,6 +25,9 @@ E void NDECL(stop_occupation);
@@ -1432,7 +1432,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #undef E
  
  #endif /* EXTERN_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/flag.h nethack-3.4.3-nao-osx/include/flag.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/flag.h nethack-3.4.3-nao-osx/include/flag.h
 --- nethack-3.4.3/include/flag.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/flag.h	2014-12-20 12:08:36.000000000 -0800
 @@ -156,9 +156,13 @@ struct flag {
@@ -1552,7 +1552,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  };
  
  /*
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/func_tab.h nethack-3.4.3-nao-osx/include/func_tab.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/func_tab.h nethack-3.4.3-nao-osx/include/func_tab.h
 --- nethack-3.4.3/include/func_tab.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/func_tab.h	2014-12-20 12:08:36.000000000 -0800
 @@ -5,17 +5,27 @@
@@ -1590,7 +1590,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  };
  
  extern struct ext_func_tab extcmdlist[];
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/global.h nethack-3.4.3-nao-osx/include/global.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/global.h nethack-3.4.3-nao-osx/include/global.h
 --- nethack-3.4.3/include/global.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/global.h	2014-12-20 12:08:36.000000000 -0800
 @@ -317,6 +317,20 @@ struct version_info {
@@ -1614,7 +1614,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #define MAXNROFROOMS	40	/* max number of rooms per level */
  #define MAX_SUBROOMS	24	/* max # of subrooms in a given room */
  #define DOORMAX		120	/* max number of doors per level */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/hack.h nethack-3.4.3-nao-osx/include/hack.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/hack.h nethack-3.4.3-nao-osx/include/hack.h
 --- nethack-3.4.3/include/hack.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/hack.h	2014-12-20 12:08:36.000000000 -0800
 @@ -53,6 +53,8 @@
@@ -1634,7 +1634,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  /* Flags to control query_category() */
  /* BY_NEXTHERE used by query_category() too, so skip 0x01 */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/obj.h nethack-3.4.3-nao-osx/include/obj.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/obj.h nethack-3.4.3-nao-osx/include/obj.h
 --- nethack-3.4.3/include/obj.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/obj.h	2014-12-20 12:08:36.000000000 -0800
 @@ -91,12 +91,18 @@ struct obj {
@@ -1657,7 +1657,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	unsigned oeaten;	/* nutrition left in food, if partly eaten */
  	long age;		/* creation date */
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/rm.h nethack-3.4.3-nao-osx/include/rm.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/rm.h nethack-3.4.3-nao-osx/include/rm.h
 --- nethack-3.4.3/include/rm.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/rm.h	2014-12-20 12:08:36.000000000 -0800
 @@ -224,8 +224,11 @@ struct symdef {
@@ -1682,7 +1682,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  /*
   * The 5 possible states of doors
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/system.h nethack-3.4.3-nao-osx/include/system.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/system.h nethack-3.4.3-nao-osx/include/system.h
 --- nethack-3.4.3/include/system.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/system.h	2014-12-20 12:53:39.000000000 -0800
 @@ -79,10 +79,10 @@ typedef long	off_t;
@@ -1738,7 +1738,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  E time_t FDECL(time, (time_t *));
  # else
  E long FDECL(time, (time_t *));
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/unixconf.h nethack-3.4.3-nao-osx/include/unixconf.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/unixconf.h nethack-3.4.3-nao-osx/include/unixconf.h
 --- nethack-3.4.3/include/unixconf.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/unixconf.h	2014-12-24 10:44:10.000000000 -0800
 @@ -19,25 +19,25 @@
@@ -1822,7 +1822,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  # endif
  # ifdef SUNOS4
  #include <memory.h>
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/wincurs.h nethack-3.4.3-nao-osx/include/wincurs.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/wincurs.h nethack-3.4.3-nao-osx/include/wincurs.h
 --- nethack-3.4.3/include/wincurs.h	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/wincurs.h	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,295 @@
@@ -2121,7 +2121,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +
 +#endif  /* WINCURS_H */
 +
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/winprocs.h nethack-3.4.3-nao-osx/include/winprocs.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/winprocs.h nethack-3.4.3-nao-osx/include/winprocs.h
 --- nethack-3.4.3/include/winprocs.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/winprocs.h	2014-12-20 12:08:36.000000000 -0800
 @@ -176,8 +176,14 @@ extern NEARDATA struct window_procs wind
@@ -2141,7 +2141,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  #define ALIGN_LEFT	1
  #define ALIGN_RIGHT	2
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/include/wintty.h nethack-3.4.3-nao-osx/include/wintty.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/wintty.h nethack-3.4.3-nao-osx/include/wintty.h
 --- nethack-3.4.3/include/wintty.h	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/include/wintty.h	2014-12-20 12:08:36.000000000 -0800
 @@ -20,6 +20,7 @@ typedef struct tty_mi {
@@ -2201,7 +2201,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  /* ### topl.c ### */
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/allmain.c nethack-3.4.3-nao-osx/src/allmain.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/allmain.c nethack-3.4.3-nao-osx/src/allmain.c
 --- nethack-3.4.3/src/allmain.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/allmain.c	2014-12-20 12:08:36.000000000 -0800
 @@ -16,6 +16,78 @@ STATIC_DCL void NDECL(do_positionbar);
@@ -2482,7 +2482,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #endif /* OVLB */
  
  /*allmain.c*/
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/apply.c nethack-3.4.3-nao-osx/src/apply.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/apply.c nethack-3.4.3-nao-osx/src/apply.c
 --- nethack-3.4.3/src/apply.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/apply.c	2014-12-20 12:08:36.000000000 -0800
 @@ -80,7 +80,7 @@ use_camera(obj)
@@ -2562,7 +2562,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	return res;
  }
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/artifact.c nethack-3.4.3-nao-osx/src/artifact.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/artifact.c nethack-3.4.3-nao-osx/src/artifact.c
 --- nethack-3.4.3/src/artifact.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/artifact.c	2014-12-20 12:08:36.000000000 -0800
 @@ -283,9 +283,10 @@ struct obj *obj;
@@ -2599,7 +2599,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		nomovemsg = "";
  		if (magr && magr == u.ustuck && sticks(youmonst.data)) {
  		    u.ustuck = (struct monst *)0;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/attrib.c nethack-3.4.3-nao-osx/src/attrib.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/attrib.c nethack-3.4.3-nao-osx/src/attrib.c
 --- nethack-3.4.3/src/attrib.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/attrib.c	2014-12-20 12:08:36.000000000 -0800
 @@ -728,4 +728,19 @@ register int n;
@@ -2622,7 +2622,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +
 +
  /*attrib.c*/
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/ball.c nethack-3.4.3-nao-osx/src/ball.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/ball.c nethack-3.4.3-nao-osx/src/ball.c
 --- nethack-3.4.3/src/ball.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/ball.c	2014-12-20 12:08:36.000000000 -0800
 @@ -557,7 +557,7 @@ drag:
@@ -2643,7 +2643,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  		*bc_control = BC_BALL;
  		move_bc(1, *bc_control, *ballx, *bally, *chainx, *chainy);
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/bones.c nethack-3.4.3-nao-osx/src/bones.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/bones.c nethack-3.4.3-nao-osx/src/bones.c
 --- nethack-3.4.3/src/bones.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/bones.c	2014-12-20 12:08:36.000000000 -0800
 @@ -31,6 +31,8 @@ d_level *lev;
@@ -2680,7 +2680,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		}
  	}
  	(void) close(fd);
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/botl.c nethack-3.4.3-nao-osx/src/botl.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/botl.c nethack-3.4.3-nao-osx/src/botl.c
 --- nethack-3.4.3/src/botl.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/botl.c	2014-12-20 12:08:36.000000000 -0800
 @@ -20,20 +20,139 @@ STATIC_DCL void NDECL(bot1);
@@ -3127,7 +3127,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  }
  
  #endif /* OVL0 */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/cmd.c nethack-3.4.3-nao-osx/src/cmd.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/cmd.c nethack-3.4.3-nao-osx/src/cmd.c
 --- nethack-3.4.3/src/cmd.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/cmd.c	2014-12-20 12:08:36.000000000 -0800
 @@ -2,6 +2,8 @@
@@ -4947,7 +4947,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	return(in_line);
  }
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/decl.c nethack-3.4.3-nao-osx/src/decl.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/decl.c nethack-3.4.3-nao-osx/src/decl.c
 --- nethack-3.4.3/src/decl.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/decl.c	2014-12-20 12:08:36.000000000 -0800
 @@ -19,7 +19,12 @@ char *catmore = 0;		/* default pager */
@@ -5043,7 +5043,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  /* dummy routine used to force linkage */
  void
  decl_init()
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/detect.c nethack-3.4.3-nao-osx/src/detect.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/detect.c nethack-3.4.3-nao-osx/src/detect.c
 --- nethack-3.4.3/src/detect.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/detect.c	2014-12-20 12:08:36.000000000 -0800
 @@ -861,7 +861,7 @@ struct obj *obj;
@@ -5082,7 +5082,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  			    if (trap->ttyp == STATUE_TRAP) {
  				if (activate_statue_trap(trap, x, y, FALSE))
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/dig.c nethack-3.4.3-nao-osx/src/dig.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/dig.c nethack-3.4.3-nao-osx/src/dig.c
 --- nethack-3.4.3/src/dig.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/dig.c	2014-12-20 12:08:36.000000000 -0800
 @@ -916,7 +916,7 @@ struct obj *obj;
@@ -5094,7 +5094,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  			    nomovemsg = "You pull free.";
  			} else if (lev->typ == IRONBARS) {
  			    pline("Clang!");
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/display.c nethack-3.4.3-nao-osx/src/display.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/display.c nethack-3.4.3-nao-osx/src/display.c
 --- nethack-3.4.3/src/display.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/display.c	2014-12-20 12:08:36.000000000 -0800
 @@ -591,13 +591,13 @@ feel_location(x, y)
@@ -5267,7 +5267,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  /*
   * back_to_glyph()
   *
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/do.c nethack-3.4.3-nao-osx/src/do.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/do.c nethack-3.4.3-nao-osx/src/do.c
 --- nethack-3.4.3/src/do.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/do.c	2014-12-20 12:08:36.000000000 -0800
 @@ -208,7 +208,7 @@ const char *verb;
@@ -5315,7 +5315,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  }
  
  STATIC_OVL void
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/do_name.c nethack-3.4.3-nao-osx/src/do_name.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/do_name.c nethack-3.4.3-nao-osx/src/do_name.c
 --- nethack-3.4.3/src/do_name.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/do_name.c	2014-12-20 12:08:36.000000000 -0800
 @@ -6,7 +6,6 @@
@@ -5718,7 +5718,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  };
  
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/do_wear.c nethack-3.4.3-nao-osx/src/do_wear.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/do_wear.c nethack-3.4.3-nao-osx/src/do_wear.c
 --- nethack-3.4.3/src/do_wear.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/do_wear.c	2014-12-20 12:08:36.000000000 -0800
 @@ -94,7 +94,9 @@ STATIC_PTR
@@ -5814,7 +5814,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		if(is_boots(otmp)) afternmv = Boots_on;
  		if(is_helmet(otmp)) afternmv = Helmet_on;
  		if(is_gloves(otmp)) afternmv = Gloves_on;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/dokick.c nethack-3.4.3-nao-osx/src/dokick.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/dokick.c nethack-3.4.3-nao-osx/src/dokick.c
 --- nethack-3.4.3/src/dokick.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/dokick.c	2014-12-20 12:08:36.000000000 -0800
 @@ -553,7 +553,7 @@ xchar x, y;
@@ -5826,7 +5826,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  	if(mon) {
  	    if (mon->isshk &&
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/dothrow.c nethack-3.4.3-nao-osx/src/dothrow.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/dothrow.c nethack-3.4.3-nao-osx/src/dothrow.c
 --- nethack-3.4.3/src/dothrow.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/dothrow.c	2014-12-20 12:08:36.000000000 -0800
 @@ -300,15 +300,19 @@ dofire()
@@ -5916,7 +5916,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  			if(mon) {
  			    if (ghitm(mon, obj))	/* was it caught? */
  				return 1;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/drawing.c nethack-3.4.3-nao-osx/src/drawing.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/drawing.c nethack-3.4.3-nao-osx/src/drawing.c
 --- nethack-3.4.3/src/drawing.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/drawing.c	2014-12-20 12:08:36.000000000 -0800
 @@ -20,9 +20,13 @@
@@ -6189,7 +6189,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  /* 0*/	'\0',
  	ILLOBJ_SYM,
  	WEAPON_SYM,
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/dungeon.c nethack-3.4.3-nao-osx/src/dungeon.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/dungeon.c nethack-3.4.3-nao-osx/src/dungeon.c
 --- nethack-3.4.3/src/dungeon.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/dungeon.c	2014-12-20 12:08:36.000000000 -0800
 @@ -632,6 +632,10 @@ struct level_map {
@@ -6203,7 +6203,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	{ X_START,	&qstart_level },
  	{ X_LOCATE,	&qlocate_level },
  	{ X_GOAL,	&nemesis_level },
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/eat.c nethack-3.4.3-nao-osx/src/eat.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/eat.c nethack-3.4.3-nao-osx/src/eat.c
 --- nethack-3.4.3/src/eat.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/eat.c	2014-12-20 12:08:36.000000000 -0800
 @@ -862,7 +862,7 @@ register int pm;
@@ -6260,7 +6260,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  }
  
  int
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/end.c nethack-3.4.3-nao-osx/src/end.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/end.c nethack-3.4.3-nao-osx/src/end.c
 --- nethack-3.4.3/src/end.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/end.c	2014-12-20 12:08:36.000000000 -0800
 @@ -10,6 +10,10 @@
@@ -7213,7 +7213,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  	    display_nhwindow(klwin, TRUE);
  	    destroy_nhwindow(klwin);
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/engrave.c nethack-3.4.3-nao-osx/src/engrave.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/engrave.c nethack-3.4.3-nao-osx/src/engrave.c
 --- nethack-3.4.3/src/engrave.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/engrave.c	2014-12-20 12:08:36.000000000 -0800
 @@ -33,6 +33,26 @@ static const char *random_mesg[] = {
@@ -7625,7 +7625,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  };
  
  /* Create a headstone at the given location.
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/explode.c nethack-3.4.3-nao-osx/src/explode.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/explode.c nethack-3.4.3-nao-osx/src/explode.c
 --- nethack-3.4.3/src/explode.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/explode.c	2014-12-20 12:08:36.000000000 -0800
 @@ -513,7 +513,7 @@ struct obj *obj;			/* only scatter this 
@@ -7637,7 +7637,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  				    hitvalu = 8 + stmp->obj->spe;
  				    if (bigmonst(youmonst.data)) hitvalu++;
  				    hitu = thitu(hitvalu,
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/files.c nethack-3.4.3-nao-osx/src/files.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/files.c nethack-3.4.3-nao-osx/src/files.c
 --- nethack-3.4.3/src/files.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/files.c	2014-12-20 12:08:36.000000000 -0800
 @@ -9,9 +9,13 @@
@@ -8143,7 +8143,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +#endif /* !LIVELOGFILE */
 +
  /*files.c*/
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/hack.c nethack-3.4.3-nao-osx/src/hack.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/hack.c nethack-3.4.3-nao-osx/src/hack.c
 --- nethack-3.4.3/src/hack.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/hack.c	2014-12-20 12:08:36.000000000 -0800
 @@ -72,7 +72,7 @@ moverock()
@@ -8411,7 +8411,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #endif
  	)
  		carrcap = MAX_CARR_CAP;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/hacklib.c nethack-3.4.3-nao-osx/src/hacklib.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/hacklib.c nethack-3.4.3-nao-osx/src/hacklib.c
 --- nethack-3.4.3/src/hacklib.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/hacklib.c	2014-12-20 12:08:36.000000000 -0800
 @@ -144,6 +144,19 @@ strkitten(s, c)		/* append a character t
@@ -8458,7 +8458,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #  endif
  # else
  #  ifdef UNIX	/* system srand48() */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/invent.c nethack-3.4.3-nao-osx/src/invent.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/invent.c nethack-3.4.3-nao-osx/src/invent.c
 --- nethack-3.4.3/src/invent.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/invent.c	2014-12-20 12:08:36.000000000 -0800
 @@ -19,7 +19,12 @@ STATIC_DCL boolean FDECL(taking_off, (co
@@ -9360,7 +9360,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	return invbuf;
  }
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/mail.c nethack-3.4.3-nao-osx/src/mail.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/mail.c nethack-3.4.3-nao-osx/src/mail.c
 --- nethack-3.4.3/src/mail.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/mail.c	2014-12-20 12:08:36.000000000 -0800
 @@ -5,6 +5,8 @@
@@ -9559,7 +9559,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +}
 +
  /*mail.c*/
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/makemon.c nethack-3.4.3-nao-osx/src/makemon.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/makemon.c nethack-3.4.3-nao-osx/src/makemon.c
 --- nethack-3.4.3/src/makemon.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/makemon.c	2014-12-20 12:08:36.000000000 -0800
 @@ -131,9 +131,11 @@ register int x, y, n;
@@ -9577,7 +9577,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		    /* Undo the second peace_minded() check in makemon(); if the
  		     * monster turned out to be peaceful the first time we
  		     * didn't create it at all; we don't want a second check.
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/mapglyph.c nethack-3.4.3-nao-osx/src/mapglyph.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/mapglyph.c nethack-3.4.3-nao-osx/src/mapglyph.c
 --- nethack-3.4.3/src/mapglyph.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/mapglyph.c	2014-12-20 12:08:36.000000000 -0800
 @@ -25,7 +25,11 @@ int explcolors[] = {
@@ -9747,7 +9747,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
      *ospecial = special;
  #ifdef TEXTCOLOR
      *ocolor = color;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/mcastu.c nethack-3.4.3-nao-osx/src/mcastu.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/mcastu.c nethack-3.4.3-nao-osx/src/mcastu.c
 --- nethack-3.4.3/src/mcastu.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/mcastu.c	2014-12-20 12:08:36.000000000 -0800
 @@ -228,7 +228,7 @@ castmu(mtmp, mattk, thinks_it_foundyou, 
@@ -9784,7 +9784,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	    if(mattk->adtyp && (mattk->adtyp < 11)) { /* no cf unsigned >0 */
  		if(canseemon(mtmp))
  		    pline("%s zaps you with a %s!", Monnam(mtmp),
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/mhitu.c nethack-3.4.3-nao-osx/src/mhitu.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/mhitu.c nethack-3.4.3-nao-osx/src/mhitu.c
 --- nethack-3.4.3/src/mhitu.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/mhitu.c	2014-12-20 12:08:36.000000000 -0800
 @@ -317,7 +317,7 @@ mattacku(mtmp)
@@ -9839,7 +9839,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	return(mon);
  }
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/mklev.c nethack-3.4.3-nao-osx/src/mklev.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/mklev.c nethack-3.4.3-nao-osx/src/mklev.c
 --- nethack-3.4.3/src/mklev.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/mklev.c	2014-12-20 12:08:36.000000000 -0800
 @@ -1462,6 +1462,12 @@ mkinvokearea()
@@ -9855,7 +9855,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  }
  
  /* Change level topology.  Boulders in the vicinity are eliminated.
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/mon.c nethack-3.4.3-nao-osx/src/mon.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/mon.c nethack-3.4.3-nao-osx/src/mon.c
 --- nethack-3.4.3/src/mon.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/mon.c	2014-12-20 12:08:36.000000000 -0800
 @@ -1481,6 +1481,12 @@ register struct monst *mtmp;
@@ -9906,7 +9906,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		}
  #endif
  		/* Archeologists should not break unique statues */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/mondata.c nethack-3.4.3-nao-osx/src/mondata.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/mondata.c nethack-3.4.3-nao-osx/src/mondata.c
 --- nethack-3.4.3/src/mondata.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/mondata.c	2014-12-20 12:08:36.000000000 -0800
 @@ -476,6 +476,10 @@ const char *in_str;
@@ -9920,7 +9920,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	    /* end of list */
  		{ 0, 0 }
  	};
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/mthrowu.c nethack-3.4.3-nao-osx/src/mthrowu.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/mthrowu.c nethack-3.4.3-nao-osx/src/mthrowu.c
 --- nethack-3.4.3/src/mthrowu.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/mthrowu.c	2014-12-20 12:08:36.000000000 -0800
 @@ -324,7 +324,7 @@ m_throw(mon, x, y, dx, dy, range, obj)
@@ -9959,7 +9959,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		    /* breath runs out sometimes. Also, give monster some
  		     * cunning; don't breath if the player fell asleep.
  		     */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/muse.c nethack-3.4.3-nao-osx/src/muse.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/muse.c nethack-3.4.3-nao-osx/src/muse.c
 --- nethack-3.4.3/src/muse.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/muse.c	2014-12-20 12:08:36.000000000 -0800
 @@ -1121,7 +1121,7 @@ register struct obj *otmp;
@@ -10002,7 +10002,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	if (canseemon(mon))
  	    pline("%s seems steadier now.", Monnam(mon));
 Binary files nethack-3.4.3/src/nethack.343-nao and nethack-3.4.3-nao-osx/src/nethack.343-nao differ
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/o_init.c nethack-3.4.3-nao-osx/src/o_init.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/o_init.c nethack-3.4.3-nao-osx/src/o_init.c
 --- nethack-3.4.3/src/o_init.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/o_init.c	2014-12-20 12:08:36.000000000 -0800
 @@ -406,7 +406,7 @@ dodiscovered()				/* free after Robert V
@@ -10014,7 +10014,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		    prev_class = oclass;
  		}
  		Sprintf(buf, "%s %s",(objects[dis].oc_pre_discovered ? "*" : " "),
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/objects.c nethack-3.4.3-nao-osx/src/objects.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/objects.c nethack-3.4.3-nao-osx/src/objects.c
 --- nethack-3.4.3/src/objects.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/objects.c	2014-12-20 12:08:36.000000000 -0800
 @@ -630,6 +630,8 @@ TOOL("magic marker", (char *)0, 1, 0, 1,
@@ -10026,7 +10026,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  TOOL("tin whistle", "whistle",  0, 0, 0, 0, 100,  3,  10, METAL, HI_METAL),
  TOOL("magic whistle", "whistle",0, 0, 1, 0,  30,  3,  10, METAL, HI_METAL),
  /* "If tin whistles are made out of tin, what do they make foghorns out of?" */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/objnam.c nethack-3.4.3-nao-osx/src/objnam.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/objnam.c nethack-3.4.3-nao-osx/src/objnam.c
 --- nethack-3.4.3/src/objnam.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/objnam.c	2014-12-20 12:08:36.000000000 -0800
 @@ -15,6 +15,9 @@ static boolean FDECL(wishymatch, (const 
@@ -10138,7 +10138,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  /* treat an object as fully ID'd when it might be used as reason for death */
  char *
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/options.c nethack-3.4.3-nao-osx/src/options.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/options.c nethack-3.4.3-nao-osx/src/options.c
 --- nethack-3.4.3/src/options.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/options.c	2014-12-20 12:08:36.000000000 -0800
 @@ -14,6 +14,11 @@ NEARDATA struct instance_flags iflags;	/
@@ -11439,7 +11439,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	{(char *)0, 0L}
  };
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/pager.c nethack-3.4.3-nao-osx/src/pager.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/pager.c nethack-3.4.3-nao-osx/src/pager.c
 --- nethack-3.4.3/src/pager.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/pager.c	2014-12-20 12:08:36.000000000 -0800
 @@ -11,8 +11,6 @@
@@ -11529,7 +11529,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #ifdef WIZARD
  			/* handle slot 9 or 10 */
  			default: display_file(DEBUGHELP, TRUE);  break;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/pickup.c nethack-3.4.3-nao-osx/src/pickup.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/pickup.c nethack-3.4.3-nao-osx/src/pickup.c
 --- nethack-3.4.3/src/pickup.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/pickup.c	2014-12-20 12:08:36.000000000 -0800
 @@ -267,7 +267,7 @@ boolean picked_some;
@@ -11881,7 +11881,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		nomovemsg = "";
  	    }
  	    return 1;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/pline.c nethack-3.4.3-nao-osx/src/pline.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/pline.c nethack-3.4.3-nao-osx/src/pline.c
 --- nethack-3.4.3/src/pline.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/pline.c	2014-12-20 12:08:36.000000000 -0800
 @@ -15,6 +15,79 @@ static boolean no_repeat = FALSE;
@@ -12032,7 +12032,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	program_state.in_impossible = 0;
  	VA_END();
  }
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/polyself.c nethack-3.4.3-nao-osx/src/polyself.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/polyself.c nethack-3.4.3-nao-osx/src/polyself.c
 --- nethack-3.4.3/src/polyself.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/polyself.c	2014-12-20 12:08:36.000000000 -0800
 @@ -729,7 +729,7 @@ rehumanize()
@@ -12053,7 +12053,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  			    return 1;
  			} else
  			    You("stiffen momentarily under %s gaze.",
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/potion.c nethack-3.4.3-nao-osx/src/potion.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/potion.c nethack-3.4.3-nao-osx/src/potion.c
 --- nethack-3.4.3/src/potion.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/potion.c	2014-12-20 12:08:36.000000000 -0800
 @@ -316,7 +316,7 @@ ghost_from_bottle()
@@ -12145,7 +12145,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  			obj_extract_self(obj);
  			obfree(obj, (struct obj *)0);
  			obj = (struct obj *) 0;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/pray.c nethack-3.4.3-nao-osx/src/pray.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/pray.c nethack-3.4.3-nao-osx/src/pray.c
 --- nethack-3.4.3/src/pray.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/pray.c	2014-12-20 12:08:36.000000000 -0800
 @@ -1206,7 +1206,7 @@ dosacrifice()
@@ -12187,7 +12187,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	return(1);
  }
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/priest.c nethack-3.4.3-nao-osx/src/priest.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/priest.c nethack-3.4.3-nao-osx/src/priest.c
 --- nethack-3.4.3/src/priest.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/priest.c	2014-12-20 12:08:36.000000000 -0800
 @@ -393,7 +393,7 @@ register int roomno;
@@ -12199,7 +12199,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		    nomovemsg = "You regain your composure.";
  	       }
  	   }
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/read.c nethack-3.4.3-nao-osx/src/read.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/read.c nethack-3.4.3-nao-osx/src/read.c
 --- nethack-3.4.3/src/read.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/read.c	2014-12-20 12:08:36.000000000 -0800
 @@ -73,6 +73,90 @@ doread()
@@ -12322,7 +12322,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		    make_stunned(HStun + rn1(10, 10), TRUE);
  		}
  	    }
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/restore.c nethack-3.4.3-nao-osx/src/restore.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/restore.c nethack-3.4.3-nao-osx/src/restore.c
 --- nethack-3.4.3/src/restore.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/restore.c	2014-12-20 12:08:36.000000000 -0800
 @@ -376,6 +376,8 @@ unsigned int *stuckid, *steedid;	/* STEE
@@ -12418,7 +12418,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	/* Success! */
  	welcome(FALSE);
  	return(1);
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/rip.c nethack-3.4.3-nao-osx/src/rip.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/rip.c nethack-3.4.3-nao-osx/src/rip.c
 --- nethack-3.4.3/src/rip.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/rip.c	2014-12-20 12:08:36.000000000 -0800
 @@ -8,7 +8,7 @@ STATIC_DCL void FDECL(center, (int, char
@@ -12430,7 +12430,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  # define TEXT_TOMBSTONE
  #endif
  #if defined(mac) || defined(__BEOS__) || defined(WIN32_GRAPHICS)
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/rnd.c nethack-3.4.3-nao-osx/src/rnd.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/rnd.c nethack-3.4.3-nao-osx/src/rnd.c
 --- nethack-3.4.3/src/rnd.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/rnd.c	2014-12-20 12:08:36.000000000 -0800
 @@ -18,10 +18,31 @@ extern int NDECL(rand);
@@ -12490,7 +12490,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  #ifdef DEBUG
  	if (x < 0 || n < 0 || (x == 0 && n != 0)) {
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/save.c nethack-3.4.3-nao-osx/src/save.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/save.c nethack-3.4.3-nao-osx/src/save.c
 --- nethack-3.4.3/src/save.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/save.c	2014-12-20 12:08:36.000000000 -0800
 @@ -48,6 +48,16 @@ static long nulls[10];
@@ -12667,7 +12667,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	tmp_at(DISP_FREEMEM, 0);	/* temporary display effects */
  #ifdef FREE_ALL_MEMORY
  # define freeobjchn(X)	(saveobjchn(0, X, FREE_SAVE),  X = 0)
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/shk.c nethack-3.4.3-nao-osx/src/shk.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/shk.c nethack-3.4.3-nao-osx/src/shk.c
 --- nethack-3.4.3/src/shk.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/shk.c	2014-12-20 12:08:36.000000000 -0800
 @@ -833,6 +833,20 @@ register struct obj *obj, *merge;
@@ -12800,7 +12800,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  /* calculate the value that the shk will charge for [one of] an object */
  STATIC_OVL long
  get_cost(obj, shkp)
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/shknam.c nethack-3.4.3-nao-osx/src/shknam.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/shknam.c nethack-3.4.3-nao-osx/src/shknam.c
 --- nethack-3.4.3/src/shknam.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/shknam.c	2014-12-20 12:08:36.000000000 -0800
 @@ -408,6 +408,7 @@ struct mkroom	*sroom;
@@ -12811,7 +12811,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #ifndef GOLDOBJ
  	shk->mgold = 1000L + 30L*(long)rnd(100);	/* initial capital */
  #else
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/sit.c nethack-3.4.3-nao-osx/src/sit.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/sit.c nethack-3.4.3-nao-osx/src/sit.c
 --- nethack-3.4.3/src/sit.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/sit.c	2014-12-20 12:08:36.000000000 -0800
 @@ -436,6 +436,7 @@ attrcurse()			/* remove a random INTRINS
@@ -12822,7 +12822,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  			You_feel("vulnerable.");
  			break;
  		}
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/sounds.c nethack-3.4.3-nao-osx/src/sounds.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/sounds.c nethack-3.4.3-nao-osx/src/sounds.c
 --- nethack-3.4.3/src/sounds.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/sounds.c	2014-12-20 12:08:36.000000000 -0800
 @@ -263,7 +263,11 @@ dosounds()
@@ -12874,7 +12874,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	    break;
  	case MS_LAUGH:
  	    {
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/sp_lev.c nethack-3.4.3-nao-osx/src/sp_lev.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/sp_lev.c nethack-3.4.3-nao-osx/src/sp_lev.c
 --- nethack-3.4.3/src/sp_lev.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/sp_lev.c	2014-12-20 12:08:36.000000000 -0800
 @@ -1010,28 +1010,48 @@ struct mkroom	*croom;
@@ -12937,7 +12937,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	stackobj(otmp);
  
      }		/* if (rn2(100) < o->chance) */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/spell.c nethack-3.4.3-nao-osx/src/spell.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/spell.c nethack-3.4.3-nao-osx/src/spell.c
 --- nethack-3.4.3/src/spell.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/spell.c	2014-12-20 12:08:36.000000000 -0800
 @@ -325,7 +325,7 @@ learn()
@@ -13015,7 +13015,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  /* Integer square root function without using floating point. */
  STATIC_OVL int
  isqrt(val)
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/steal.c nethack-3.4.3-nao-osx/src/steal.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/steal.c nethack-3.4.3-nao-osx/src/steal.c
 --- nethack-3.4.3/src/steal.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/steal.c	2014-12-20 12:08:36.000000000 -0800
 @@ -382,7 +382,7 @@ gotobj:
@@ -13027,7 +13027,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  			remove_worn_item(otmp, TRUE);
  			otmp->cursed = curssv;
  			if(multi < 0){
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/teleport.c nethack-3.4.3-nao-osx/src/teleport.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/teleport.c nethack-3.4.3-nao-osx/src/teleport.c
 --- nethack-3.4.3/src/teleport.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/teleport.c	2014-12-20 12:08:36.000000000 -0800
 @@ -326,7 +326,7 @@ boolean allow_drag;
@@ -13039,7 +13039,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	vision_recalc(0);	/* vision before effects */
  	spoteffects(TRUE);
  	invocation_message();
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/timeout.c nethack-3.4.3-nao-osx/src/timeout.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/timeout.c nethack-3.4.3-nao-osx/src/timeout.c
 --- nethack-3.4.3/src/timeout.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/timeout.c	2014-12-20 12:08:36.000000000 -0800
 @@ -30,12 +30,14 @@ stoned_dialogue()
@@ -13095,7 +13095,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	}
      } else
  	You_hear("a rumbling noise.");
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/topten.c nethack-3.4.3-nao-osx/src/topten.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/topten.c nethack-3.4.3-nao-osx/src/topten.c
 --- nethack-3.4.3/src/topten.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/topten.c	2014-12-20 12:08:36.000000000 -0800
 @@ -9,6 +9,10 @@
@@ -13705,7 +13705,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  pickentry:
  	for(i = rank; i; i--) {
  	    readentry(rfile, tt);
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/trap.c nethack-3.4.3-nao-osx/src/trap.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/trap.c nethack-3.4.3-nao-osx/src/trap.c
 --- nethack-3.4.3/src/trap.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/trap.c	2014-12-20 12:08:36.000000000 -0800
 @@ -591,7 +591,7 @@ unsigned trflags;
@@ -13797,7 +13797,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		if(obj->owornmask) {
  		    if (usurvive)
  			Your("%s into flame!", aobjnam(obj, "burst"));
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/uhitm.c nethack-3.4.3-nao-osx/src/uhitm.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/uhitm.c nethack-3.4.3-nao-osx/src/uhitm.c
 --- nethack-3.4.3/src/uhitm.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/uhitm.c	2014-12-20 12:08:36.000000000 -0800
 @@ -99,6 +99,9 @@ register struct monst *mtmp;
@@ -13864,7 +13864,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  		    exercise(A_DEX, FALSE);
  		}
  		break;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/unicode.c nethack-3.4.3-nao-osx/src/unicode.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/unicode.c nethack-3.4.3-nao-osx/src/unicode.c
 --- nethack-3.4.3/src/unicode.c	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/unicode.c	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,221 @@
@@ -14089,7 +14089,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +}
 +
 +/*unicode.c*/
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/vault.c nethack-3.4.3-nao-osx/src/vault.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/vault.c nethack-3.4.3-nao-osx/src/vault.c
 --- nethack-3.4.3/src/vault.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/vault.c	2014-12-20 12:08:36.000000000 -0800
 @@ -260,7 +260,7 @@ fnd:
@@ -14101,7 +14101,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	trycount = 5;
  	do {
  	    getlin("\"Hello stranger, who are you?\" -", buf);
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/weapon.c nethack-3.4.3-nao-osx/src/weapon.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/weapon.c nethack-3.4.3-nao-osx/src/weapon.c
 --- nethack-3.4.3/src/weapon.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/weapon.c	2014-12-20 12:08:36.000000000 -0800
 @@ -9,6 +9,10 @@
@@ -14237,7 +14237,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	} while (speedy && n > 0);
  	return 0;
  }
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/wield.c nethack-3.4.3-nao-osx/src/wield.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/wield.c nethack-3.4.3-nao-osx/src/wield.c
 --- nethack-3.4.3/src/wield.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/wield.c	2014-12-20 12:08:36.000000000 -0800
 @@ -721,7 +721,7 @@ register int amount;
@@ -14249,7 +14249,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	    if (!Blind)
  		Your("%s %s.", aobjnam(uwep, "faintly glow"), color);
  	    return(1);
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/windows.c nethack-3.4.3-nao-osx/src/windows.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/windows.c nethack-3.4.3-nao-osx/src/windows.c
 --- nethack-3.4.3/src/windows.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/windows.c	2014-12-20 12:08:36.000000000 -0800
 @@ -6,6 +6,9 @@
@@ -14272,7 +14272,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #ifdef X11_GRAPHICS
      { &X11_procs, win_X11_init },
  #endif
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/worm.c nethack-3.4.3-nao-osx/src/worm.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/worm.c nethack-3.4.3-nao-osx/src/worm.c
 --- nethack-3.4.3/src/worm.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/worm.c	2014-12-20 12:08:36.000000000 -0800
 @@ -291,7 +291,7 @@ wormhitu(worm)
@@ -14332,7 +14332,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
      new_worm->wormno = new_wnum;	/* affix new worm number */
  
      /* Devalue the monster level of both halves of the worm. */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/src/zap.c nethack-3.4.3-nao-osx/src/zap.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/zap.c nethack-3.4.3-nao-osx/src/zap.c
 --- nethack-3.4.3/src/zap.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/zap.c	2014-12-20 12:08:36.000000000 -0800
 @@ -444,7 +444,7 @@ int locflags;	/* non-zero means get loca
@@ -14441,7 +14441,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	    /* The(aobjnam()) is safe since otmp is unidentified -dlc */
  	    (void) hold_another_object(otmp, u.uswallow ?
  				       "Oops!  %s out of your reach!" :
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/sys/unix/Makefile.src nethack-3.4.3-nao-osx/sys/unix/Makefile.src
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/Makefile.src nethack-3.4.3-nao-osx/sys/unix/Makefile.src
 --- nethack-3.4.3/sys/unix/Makefile.src	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/sys/unix/Makefile.src	2014-12-20 13:00:35.000000000 -0800
 @@ -44,7 +44,7 @@ LINK=$(CC)
@@ -14574,9 +14574,9 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  vault.o: vault.c $(HACK_H) ../include/vault.h
  version.o: version.c $(HACK_H) ../include/date.h ../include/patchlevel.h
  vision.o: vision.c $(HACK_H) ../include/vis_tab.h
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/sys/unix/Makefile.top nethack-3.4.3-nao-osx/sys/unix/Makefile.top
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/Makefile.top nethack-3.4.3-nao-osx/sys/unix/Makefile.top
 --- nethack-3.4.3/sys/unix/Makefile.top	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/sys/unix/Makefile.top	2014-12-24 10:44:10.000000000 -0800
++++ nethack-3.4.3-nao-osx/sys/unix/Makefile.top	2014-12-24 11:21:20.000000000 -0800
 @@ -14,18 +14,17 @@
  # MAKE = make
  
@@ -14587,7 +14587,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 -# GAME     = nethack.prg
 -GAMEUID  = games
 -GAMEGRP  = bin
-+GAMEUID  = $(USER)
++GAMEUID  = root
 +GAMEGRP  = admin
  
  # Permissions - some places use setgid instead of setuid, for instance
@@ -14675,7 +14675,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  # and a reminder
  	@echo You may also want to reinstall the man pages via the doc Makefile.
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/sys/unix/Makefile.utl nethack-3.4.3-nao-osx/sys/unix/Makefile.utl
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/Makefile.utl nethack-3.4.3-nao-osx/sys/unix/Makefile.utl
 --- nethack-3.4.3/sys/unix/Makefile.utl	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/sys/unix/Makefile.utl	2014-12-20 12:08:36.000000000 -0800
 @@ -101,11 +101,11 @@ OBJDIR = ../src
@@ -14694,7 +14694,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
   
  # these are the names of the output files from YACC/LEX. Under MS-DOS
  # and similar systems, they may differ
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/sys/unix/unixmain.c nethack-3.4.3-nao-osx/sys/unix/unixmain.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/unixmain.c nethack-3.4.3-nao-osx/sys/unix/unixmain.c
 --- nethack-3.4.3/sys/unix/unixmain.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/sys/unix/unixmain.c	2014-12-20 12:08:36.000000000 -0800
 @@ -54,7 +54,9 @@ char *argv[];
@@ -14763,7 +14763,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	dlb_init();	/* must be before newgame() */
  
  	/*
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/sys/unix/unixunix.c nethack-3.4.3-nao-osx/sys/unix/unixunix.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/unixunix.c nethack-3.4.3-nao-osx/sys/unix/unixunix.c
 --- nethack-3.4.3/sys/unix/unixunix.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/sys/unix/unixunix.c	2014-12-20 12:08:36.000000000 -0800
 @@ -8,6 +8,7 @@
@@ -14835,7 +14835,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  			unlock_file(HLOCK);
  			error("%s", "");
  		}
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/util/makedefs.c nethack-3.4.3-nao-osx/util/makedefs.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/util/makedefs.c nethack-3.4.3-nao-osx/util/makedefs.c
 --- nethack-3.4.3/util/makedefs.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/util/makedefs.c	2014-12-20 12:08:36.000000000 -0800
 @@ -652,6 +652,9 @@ static const char *build_opts[] = {
@@ -14912,7 +14912,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #ifdef X11_GRAPHICS
  		"X11",
  #endif
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/util/recover.c nethack-3.4.3-nao-osx/util/recover.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/util/recover.c nethack-3.4.3-nao-osx/util/recover.c
 --- nethack-3.4.3/util/recover.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/util/recover.c	2014-12-20 12:08:36.000000000 -0800
 @@ -21,10 +21,10 @@ extern int FDECL(vms_creat, (const char 
@@ -15058,7 +15058,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  			if (lfd >= 0) {
  				/* any or all of these may not exist */
  				levc = (xchar) lev;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursdial.c nethack-3.4.3-nao-osx/win/curses/cursdial.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursdial.c nethack-3.4.3-nao-osx/win/curses/cursdial.c
 --- nethack-3.4.3/win/curses/cursdial.c	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursdial.c	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,1614 @@
@@ -16676,7 +16676,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +{
 +    return term_rows - 2;
 +}
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursdial.h nethack-3.4.3-nao-osx/win/curses/cursdial.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursdial.h nethack-3.4.3-nao-osx/win/curses/cursdial.h
 --- nethack-3.4.3/win/curses/cursdial.h	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursdial.h	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,35 @@
@@ -16715,7 +16715,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +
 +
 +#endif  /* CURSDIAL_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursinit.c nethack-3.4.3-nao-osx/win/curses/cursinit.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursinit.c nethack-3.4.3-nao-osx/win/curses/cursinit.c
 --- nethack-3.4.3/win/curses/cursinit.c	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursinit.c	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,1298 @@
@@ -18017,7 +18017,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +#endif
 +}
 +
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursinit.h nethack-3.4.3-nao-osx/win/curses/cursinit.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursinit.h nethack-3.4.3-nao-osx/win/curses/cursinit.h
 --- nethack-3.4.3/win/curses/cursinit.h	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursinit.h	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,21 @@
@@ -18042,7 +18042,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +
 +
 +#endif  /* CURSINIT_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursmain.c nethack-3.4.3-nao-osx/win/curses/cursmain.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursmain.c nethack-3.4.3-nao-osx/win/curses/cursmain.c
 --- nethack-3.4.3/win/curses/cursmain.c	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursmain.c	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,733 @@
@@ -18779,7 +18779,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +        doredraw();
 +    }
 +}
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursmesg.c nethack-3.4.3-nao-osx/win/curses/cursmesg.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursmesg.c nethack-3.4.3-nao-osx/win/curses/cursmesg.c
 --- nethack-3.4.3/win/curses/cursmesg.c	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursmesg.c	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,485 @@
@@ -19268,7 +19268,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +    }
 +}
 +
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursmesg.h nethack-3.4.3-nao-osx/win/curses/cursmesg.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursmesg.h nethack-3.4.3-nao-osx/win/curses/cursmesg.h
 --- nethack-3.4.3/win/curses/cursmesg.h	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursmesg.h	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,21 @@
@@ -19293,7 +19293,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +void curses_count_window(const char *count_text);
 +
 +#endif  /* CURSMESG_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursmisc.c nethack-3.4.3-nao-osx/win/curses/cursmisc.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursmisc.c nethack-3.4.3-nao-osx/win/curses/cursmisc.c
 --- nethack-3.4.3/win/curses/cursmisc.c	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursmisc.c	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,1006 @@
@@ -20303,7 +20303,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +extern void term_end_color() {}
 +extern void term_end_attr(int attr) {}
 +#endif  /* STATUS_COLORS && !TTY_GRAPGICS */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursmisc.h nethack-3.4.3-nao-osx/win/curses/cursmisc.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursmisc.h nethack-3.4.3-nao-osx/win/curses/cursmisc.h
 --- nethack-3.4.3/win/curses/cursmisc.h	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursmisc.h	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,48 @@
@@ -20355,7 +20355,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +int curses_get_mouse(int *mousex, int *mousey, int *mod);
 +
 +#endif  /* CURSMISC_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursstat.c nethack-3.4.3-nao-osx/win/curses/cursstat.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursstat.c nethack-3.4.3-nao-osx/win/curses/cursstat.c
 --- nethack-3.4.3/win/curses/cursstat.c	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursstat.c	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,2727 @@
@@ -23086,7 +23086,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +}
 +#endif  /* STATUS_COLORS */
 +
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/cursstat.h nethack-3.4.3-nao-osx/win/curses/cursstat.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/cursstat.h nethack-3.4.3-nao-osx/win/curses/cursstat.h
 --- nethack-3.4.3/win/curses/cursstat.h	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/cursstat.h	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,12 @@
@@ -23102,7 +23102,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +
 +
 +#endif  /* CURSSTAT_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/curswins.c nethack-3.4.3-nao-osx/win/curses/curswins.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/curswins.c nethack-3.4.3-nao-osx/win/curses/curswins.c
 --- nethack-3.4.3/win/curses/curswins.c	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/curswins.c	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,820 @@
@@ -23926,7 +23926,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +    
 +    return FALSE;
 +}
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/curses/curswins.h nethack-3.4.3-nao-osx/win/curses/curswins.h
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/curses/curswins.h nethack-3.4.3-nao-osx/win/curses/curswins.h
 --- nethack-3.4.3/win/curses/curswins.h	1969-12-31 16:00:00.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/curses/curswins.h	2014-12-20 12:08:36.000000000 -0800
 @@ -0,0 +1,46 @@
@@ -23976,7 +23976,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
 +
 +
 +#endif  /* CURSWIN_H */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/gnome/gnbind.c nethack-3.4.3-nao-osx/win/gnome/gnbind.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/gnome/gnbind.c nethack-3.4.3-nao-osx/win/gnome/gnbind.c
 --- nethack-3.4.3/win/gnome/gnbind.c	2003-12-07 15:39:14.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/gnome/gnbind.c	2014-12-20 12:08:36.000000000 -0800
 @@ -1052,7 +1052,7 @@ char gnome_yn_function(const char *quest
@@ -23988,7 +23988,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	    result=yn_esc_map;
  	} else if (choices && !index(choices,ch)) {
  	    /* FYI: ch==-115 is for KP_ENTER */
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/tty/getline.c nethack-3.4.3-nao-osx/win/tty/getline.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/tty/getline.c nethack-3.4.3-nao-osx/win/tty/getline.c
 --- nethack-3.4.3/win/tty/getline.c	2003-12-07 15:39:14.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/tty/getline.c	2014-12-20 12:08:36.000000000 -0800
 @@ -68,10 +68,20 @@ getlin_hook_proc hook;
@@ -24041,7 +24041,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  
  	for (i = 0; extcmdlist[i].ef_txt != (char *)0; i++)
  		if (!strcmpi(buf, extcmdlist[i].ef_txt)) break;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/tty/termcap.c nethack-3.4.3-nao-osx/win/tty/termcap.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/tty/termcap.c nethack-3.4.3-nao-osx/win/tty/termcap.c
 --- nethack-3.4.3/win/tty/termcap.c	2003-12-07 15:39:14.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/tty/termcap.c	2014-12-20 12:53:39.000000000 -0800
 @@ -40,6 +40,8 @@ static void NDECL(kill_hilite);
@@ -24311,7 +24311,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  	return hilites[color] != (char *)0;
  }
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/tty/topl.c nethack-3.4.3-nao-osx/win/tty/topl.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/tty/topl.c nethack-3.4.3-nao-osx/win/tty/topl.c
 --- nethack-3.4.3/win/tty/topl.c	2003-12-07 15:39:14.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/tty/topl.c	2014-12-20 12:08:36.000000000 -0800
 @@ -15,7 +15,7 @@
@@ -24341,7 +24341,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
  #endif
  }
  
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/tty/wintty.c nethack-3.4.3-nao-osx/win/tty/wintty.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/tty/wintty.c nethack-3.4.3-nao-osx/win/tty/wintty.c
 --- nethack-3.4.3/win/tty/wintty.c	2003-12-07 15:39:14.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/tty/wintty.c	2014-12-20 12:08:36.000000000 -0800
 @@ -16,6 +16,10 @@
@@ -25056,7 +25056,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.
      if (ttyDisplay && ttyDisplay->toplin == 1)
  		ttyDisplay->toplin = 2;
      return i;
-diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' -rupN nethack-3.4.3/win/win32/mhmenu.c nethack-3.4.3-nao-osx/win/win32/mhmenu.c
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/win/win32/mhmenu.c nethack-3.4.3-nao-osx/win/win32/mhmenu.c
 --- nethack-3.4.3/win/win32/mhmenu.c	2003-12-07 15:39:14.000000000 -0800
 +++ nethack-3.4.3-nao-osx/win/win32/mhmenu.c	2014-12-20 12:08:36.000000000 -0800
 @@ -63,6 +63,10 @@ typedef struct mswin_nethack_menu_window
