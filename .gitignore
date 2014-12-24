@@ -1,2 +1,7 @@
 *.o
 *.lev
+/Makefile
+/src/Makefile
+/dat/Makefile
+/doc/Makefile
+/util/Makefile
