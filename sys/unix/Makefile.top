@@ -16,7 +16,7 @@
 # make NetHack
 PREFIX	 = /opt
 GAME     = nethack
-GAMEUID  = $(USER)
+GAMEUID  = root
 GAMEGRP  = admin
 
 # Permissions - some places use setgid instead of setuid, for instance
