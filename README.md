@@ -1,7 +1,7 @@
 NetHack 3.4.3, NAO version, for OSX
 ===
 
-This repository contains a fork of the [nethack.alt.org](http://nethack.alt.org) repository.  The NAO version of nethack contains the following patches (from [NAO's version information](http://alt.org/nethack/naonh.php))
+This repository contains a fork of the [nethack.alt.org](http://nethack.alt.org) repository altered for OSX installation.
 
 Automated installation
 ---
@@ -43,7 +43,7 @@ New changes
 
 The patch
 ---
-Created with `diff --exclude=.git* --exclude=*.diff --exclude=*.patch -rupN "$VANILLA_DIR/" "$PATCHED_DIR/" > "$PATCH_FILENAME"`
+Created with `diff --exclude=.git* --exclude=*.diff --exclude=*.patch --exclude=Makefile -rupN "$VANILLA_DIR/" "$PATCHED_DIR/" > "$PATCH_FILENAME"`
 
 Changes implemented by NAO
 ---
