@@ -14,10 +14,10 @@
 # MAKE = make
 
 # make NetHack
-PREFIX	 = /opt
+PREFIX	 = /usr/local/Cellar/nethack/3.4.3
 GAME     = nethack
-GAMEUID  = root
-GAMEGRP  = staff
+GAMEUID  = $(USER)
+GAMEGRP  = admin
 
 # Permissions - some places use setgid instead of setuid, for instance
 # See also the option "SECURE" in include/config.h
@@ -34,8 +34,8 @@ DIRPERM  = 0775
 # therefore there should not be anything in GAMEDIR that you want to keep
 # (if there is, you'll have to do the installation by hand or modify the
 # instructions)
-GAMEDIR  = $(PREFIX)/nethack
-VARDIR  = $(GAMEDIR)/var
+GAMEDIR  = $(PREFIX)/libexec
+VARDIR  = $(GAMEDIR)
 #SHELLDIR = $(PREFIX)/games
 
 # per discussion in Install.X11 and Install.Qt
