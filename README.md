@@ -14,36 +14,61 @@ Until then, however...
 Manual installation
 ---
 1. Clone the repo
+    
     ```
     % git clone git@github.com:ffleming/nethack-3.4.3-nao-osx.git
     ```
+
 2. Enter the repo
+
    ```
    % cd nethack-3.4.3-nao-osx
    ```
+
 3. Setup (no autoconf here!)
-   ```
-   % sh sys/unux/setup.sh l
-   ```
+
+    ```
+    % sh sys/unux/setup.sh l
+    ```
+
 4. Build
-   ```
-   % make
-   ```
+    
+    ```
+    % make
+    ```
+
 5. Install
-   ```
-   % sudo make install
-   ```
+    
+    ```
+    % sudo make install
+    ```
+
+6. Don't forget the manpages!
+    
+    ```
+    % sudo make manpages
+    ```
+
+7. Symlink the `nethack` binary
+
+    ```
+    % sudo ln -s /opt/nethack/nethack /usr/bin/nethack
+    ```
 
 New changes
 ---
 * Necessary alterations for compiling on OSX
 * Install to `/opt/nethack`
 * Define SHELL to allow use of `!` to drop to a shell
-* A [patch](https://raw.githubusercontent.com/ffleming/nethack-3.4.3-nao-osx/master/nethack-3.4.3-nao-osx.patch) against vanilla nethack 3.4.3 for use by [Homebrew](http://brew.sh/) via `brew install nethack`
+* A [patch](https://raw.githubusercontent.com/ffleming/nethack-3.4.3-nao-osx/master/nethack-3.4.3-nao-osx.diff) against vanilla nethack 3.4.3 for use by [Homebrew](http://brew.sh/) via `brew install nethack`
+* Manpages install to `/usr/share/man/man6`
 
 The patch
 ---
-Created with `diff --exclude=.git* --exclude=*.diff --exclude=*.patch --exclude=Makefile -rupN "$VANILLA_DIR/" "$PATCHED_DIR/" > "$PATCH_FILENAME"`
+Created with 
+```
+% diff --exclude=.git* --exclude=*.diff --exclude=*.patch --exclude=Makefile -rupN "$VANILLA_DIR/" "$PATCHED_DIR/" > "$PATCH_FILENAME"
+```
 
 Changes implemented by NAO
 ---
