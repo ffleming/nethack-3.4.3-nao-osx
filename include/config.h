@@ -218,7 +218,7 @@
  * otherwise it will be the current directory.
  */
 # ifndef HACKDIR
-#  define HACKDIR "/opt/nethack"
+#  define HACKDIR "/usr/local/Cellar/nethack/3.4.3/libexec"
 # endif
 
 /*
