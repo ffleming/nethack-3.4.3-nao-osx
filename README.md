@@ -62,6 +62,7 @@ New changes
 * Define SHELL to allow use of `!` to drop to a shell
 * A [patch](https://raw.githubusercontent.com/ffleming/nethack-3.4.3-nao-osx/master/nethack-3.4.3-nao-osx.diff) against vanilla nethack 3.4.3 for use by [Homebrew](http://brew.sh/) via `brew install nethack`
 * Manpages install to `/usr/share/man/man6`
+* Use the data librarian (define DLB) for a cleaner install
 
 The patch
 ---
