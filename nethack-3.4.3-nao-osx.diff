@@ -46,8 +46,8 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
 +---- Michael Deutschmann <michael@talamasca.ocis.net>
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/README.md nethack-3.4.3-nao-osx/README.md
 --- nethack-3.4.3/README.md	1969-12-31 16:00:00.000000000 -0800
-+++ nethack-3.4.3-nao-osx/README.md	2014-12-24 14:19:28.000000000 -0800
-@@ -0,0 +1,178 @@
++++ nethack-3.4.3-nao-osx/README.md	2014-12-30 19:41:45.000000000 -0800
+@@ -0,0 +1,179 @@
 +NetHack 3.4.3, NAO version, for OSX
 +===
 +
@@ -112,6 +112,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
 +* Define SHELL to allow use of `!` to drop to a shell
 +* A [patch](https://raw.githubusercontent.com/ffleming/nethack-3.4.3-nao-osx/master/nethack-3.4.3-nao-osx.diff) against vanilla nethack 3.4.3 for use by [Homebrew](http://brew.sh/) via `brew install nethack`
 +* Manpages install to `/usr/share/man/man6`
++* Use the data librarian (define DLB) for a cleaner install
 +
 +The patch
 +---
