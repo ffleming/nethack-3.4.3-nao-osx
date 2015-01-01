@@ -188,6 +188,7 @@
 
 #ifdef __APPLE__
 #define COMPRESS "/usr/bin/compress"
+#define COMPRESS_EXTENSION ".Z"
 #endif
 
 #ifndef COMPRESS
