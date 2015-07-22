@@ -46,8 +46,8 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
 +---- Michael Deutschmann <michael@talamasca.ocis.net>
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/README.md nethack-3.4.3-nao-osx/README.md
 --- nethack-3.4.3/README.md	1969-12-31 16:00:00.000000000 -0800
-+++ nethack-3.4.3-nao-osx/README.md	2014-12-30 19:41:45.000000000 -0800
-@@ -0,0 +1,179 @@
++++ nethack-3.4.3-nao-osx/README.md	2015-07-22 11:00:45.000000000 -0700
+@@ -0,0 +1,181 @@
 +NetHack 3.4.3, NAO version, for OSX
 +===
 +
@@ -113,6 +113,8 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
 +* A [patch](https://raw.githubusercontent.com/ffleming/nethack-3.4.3-nao-osx/master/nethack-3.4.3-nao-osx.diff) against vanilla nethack 3.4.3 for use by [Homebrew](http://brew.sh/) via `brew install nethack`
 +* Manpages install to `/usr/share/man/man6`
 +* Use the data librarian (define DLB) for a cleaner install
++* You can now pass `--version` to the nethack binary to print out version
++  information.
 +
 +The patch
 +---
@@ -779,7 +781,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  #endif /* COLOR_H */
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/config.h nethack-3.4.3-nao-osx/include/config.h
 --- nethack-3.4.3/include/config.h	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/include/config.h	2014-12-31 16:14:22.000000000 -0800
++++ nethack-3.4.3-nao-osx/include/config.h	2014-12-31 16:40:27.000000000 -0800
 @@ -43,11 +43,21 @@
   * Some combinations make no sense.  See the installation document.
   */
@@ -802,7 +804,21 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  /*
   * Define the default window system.  This should be one that is compiled
   * into your system (see defines above).  Known window systems are:
-@@ -169,11 +179,16 @@
+@@ -141,6 +151,13 @@
+  *		playground.
+  */
+ 
++/* 
++ * If this is defined, allow loading saves from other versions of
++ * nethack with different options.  Beware! On a public system, this
++ * could allow users to cheat!
++ */
++#define ALLOW_LOADING_FROM_DIFFERENT_VERSIONS 
++
+ #ifndef WIZARD		/* allow for compile-time or Makefile changes */
+ # ifndef KR1ED
+ #  define WIZARD  "wizard" /* the person allowed to use the -D option */
+@@ -169,11 +186,16 @@
  
  #ifdef UNIX
  /* path and file name extension for compression program */
@@ -823,7 +839,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  #endif
  
  #ifndef COMPRESS
-@@ -185,7 +200,7 @@
+@@ -185,7 +207,7 @@
   *	a tar-like file, thus making a neater installation.  See *conf.h
   *	for detailed configuration.
   */
@@ -832,7 +848,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  
  /*
   *	Defining INSURANCE slows down level changes, but allows games that
-@@ -204,7 +219,7 @@
+@@ -204,7 +226,7 @@
   * otherwise it will be the current directory.
   */
  # ifndef HACKDIR
@@ -841,7 +857,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  # endif
  
  /*
-@@ -276,6 +291,12 @@ typedef signed char	schar;
+@@ -276,6 +298,12 @@ typedef signed char	schar;
  typedef unsigned char	uchar;
  #endif
  
@@ -854,7 +870,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  /*
   * Various structures have the option of using bitfields to save space.
   * If your C compiler handles bitfields well (e.g., it can initialize structs
-@@ -338,7 +359,7 @@ typedef unsigned char	uchar;
+@@ -338,7 +366,7 @@ typedef unsigned char	uchar;
  #endif
  
  #define EXP_ON_BOTL	/* Show experience on bottom line */
@@ -863,7 +879,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  
  /*
   * Section 5:  EXPERIMENTAL STUFF
-@@ -348,8 +369,95 @@ typedef unsigned char	uchar;
+@@ -348,8 +376,95 @@ typedef unsigned char	uchar;
   * bugs left here.
   */
  
@@ -14137,6 +14153,23 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  	trycount = 5;
  	do {
  	    getlin("\"Hello stranger, who are you?\" -", buf);
+diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/version.c nethack-3.4.3-nao-osx/src/version.c
+--- nethack-3.4.3/src/version.c	2003-12-07 15:39:13.000000000 -0800
++++ nethack-3.4.3-nao-osx/src/version.c	2014-12-31 16:33:06.000000000 -0800
+@@ -93,7 +93,12 @@ boolean complain;
+ 	    if (complain)
+ 		pline("Configuration incompatibility for file \"%s\".",
+ 		      filename);
+-	    return FALSE;
++#ifdef ALLOW_LOADING_FROM_DIFFERENT_VERSIONS
++    pline("But that's OK");  
++      return TRUE;
++#else
++      return FALSE;
++#endif
+ 	}
+ 	return TRUE;
+ }
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/weapon.c nethack-3.4.3-nao-osx/src/weapon.c
 --- nethack-3.4.3/src/weapon.c	2003-12-07 15:39:13.000000000 -0800
 +++ nethack-3.4.3-nao-osx/src/weapon.c	2014-12-20 12:08:36.000000000 -0800
@@ -14491,7 +14524,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  # manual installation for most BSD-style systems
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/Makefile.src nethack-3.4.3-nao-osx/sys/unix/Makefile.src
 --- nethack-3.4.3/sys/unix/Makefile.src	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/sys/unix/Makefile.src	2014-12-20 13:00:35.000000000 -0800
++++ nethack-3.4.3-nao-osx/sys/unix/Makefile.src	2015-07-22 11:40:20.000000000 -0700
 @@ -44,7 +44,7 @@ LINK=$(CC)
  # for UNIX systems
  SYSSRC = ../sys/share/ioctl.c ../sys/share/unixtty.c ../sys/unix/unixmain.c \
@@ -14585,6 +14618,15 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  	$(RANDOBJ) $(SYSOBJ) $(WINOBJ) version.o
  # the .o files from the HACKCSRC, SYSSRC, and WINSRC lists
  
+@@ -588,7 +596,7 @@ ioctl.o: ../sys/share/ioctl.c $(HACK_H) 
+ 	$(CC) $(CFLAGS) -c ../sys/share/ioctl.c
+ unixtty.o: ../sys/share/unixtty.c $(HACK_H)
+ 	$(CC) $(CFLAGS) -c ../sys/share/unixtty.c
+-unixmain.o: ../sys/unix/unixmain.c $(HACK_H) ../include/dlb.h
++unixmain.o: ../sys/unix/unixmain.c $(HACK_H) ../include/dlb.h ../include/date.h
+ 	$(CC) $(CFLAGS) -c ../sys/unix/unixmain.c
+ unixunix.o: ../sys/unix/unixunix.c $(HACK_H)
+ 	$(CC) $(CFLAGS) -c ../sys/unix/unixunix.c
 @@ -605,6 +613,28 @@ topl.o: ../win/tty/topl.c $(HACK_H) ../i
  wintty.o: ../win/tty/wintty.c $(HACK_H) ../include/dlb.h \
  		../include/patchlevel.h ../include/tcap.h
@@ -14744,8 +14786,16 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  # and similar systems, they may differ
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/unixmain.c nethack-3.4.3-nao-osx/sys/unix/unixmain.c
 --- nethack-3.4.3/sys/unix/unixmain.c	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/sys/unix/unixmain.c	2014-12-20 12:08:36.000000000 -0800
-@@ -54,7 +54,9 @@ char *argv[];
++++ nethack-3.4.3-nao-osx/sys/unix/unixmain.c	2015-07-22 11:40:20.000000000 -0700
+@@ -6,6 +6,7 @@
+ 
+ #include "hack.h"
+ #include "dlb.h"
++#include "date.h"
+ 
+ #include <sys/stat.h>
+ #include <signal.h>
+@@ -54,7 +55,9 @@ char *argv[];
  	register char *dir;
  #endif
  	boolean exact_username;
@@ -14756,7 +14806,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  #if defined(__APPLE__)
  	/* special hack to change working directory to a resource fork when
  	   running from finder --sam */
-@@ -84,6 +86,12 @@ char *argv[];
+@@ -84,6 +87,12 @@ char *argv[];
  	}
  #endif
  
@@ -14769,7 +14819,22 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  	hname = argv[0];
  	hackpid = getpid();
  	(void) umask(0777 & ~FCMASK);
-@@ -163,10 +171,6 @@ char *argv[];
+@@ -134,6 +143,14 @@ char *argv[];
+ 		exit(EXIT_SUCCESS);
+ 	    }
+ 	}
++  for(int i = 0; i < argc; i++) {
++    if(strncmp(argv[i], "--version", 9) == 0) {
++      printf("%s\n", VERSION_ID);
++      printf("nao-osx v1.1\n");
++      printf("http://github.com/ffleming/nethack-3.4.3-nao-osx/releases/tag/v1.1\n");
++      exit(EXIT_SUCCESS);
++    }
++  }
+ 
+ 	/*
+ 	 * Change directories before we initialize the window system so
+@@ -163,10 +180,6 @@ char *argv[];
  	 * It seems you really want to play.
  	 */
  	u.uhp = 1;	/* prevent RIP on early quits */
@@ -14780,7 +14845,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  
  	process_options(argc, argv);	/* command line options */
  
-@@ -182,8 +186,8 @@ char *argv[];
+@@ -182,8 +195,8 @@ char *argv[];
  		Strcpy(plname, "wizard");
  	else
  #endif
@@ -14791,7 +14856,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  		askname();
  	} else if (exact_username) {
  		/* guard against user names with hyphens in them */
-@@ -205,6 +209,7 @@ char *argv[];
+@@ -205,6 +218,7 @@ char *argv[];
  		 */
  		(void) signal(SIGQUIT,SIG_IGN);
  		(void) signal(SIGINT,SIG_IGN);
@@ -14799,7 +14864,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  		if(!locknum)
  			Sprintf(lock, "%d%s", (int)getuid(), plname);
  		getlock();
-@@ -215,6 +220,11 @@ char *argv[];
+@@ -215,6 +229,11 @@ char *argv[];
  	}
  #endif /* WIZARD */
  

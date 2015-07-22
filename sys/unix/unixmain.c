@@ -6,6 +6,7 @@
 
 #include "hack.h"
 #include "dlb.h"
+#include "date.h"
 
 #include <sys/stat.h>
 #include <signal.h>
@@ -142,6 +143,14 @@ char *argv[];
 		exit(EXIT_SUCCESS);
 	    }
 	}
+  for(int i = 0; i < argc; i++) {
+    if(strncmp(argv[i], "--version", 9) == 0) {
+      printf("%s\n", VERSION_ID);
+      printf("nao-osx v1.1\n");
+      printf("http://github.com/ffleming/nethack-3.4.3-nao-osx/releases/tag/v1.1\n");
+      exit(EXIT_SUCCESS);
+    }
+  }
 
 	/*
 	 * Change directories before we initialize the window system so

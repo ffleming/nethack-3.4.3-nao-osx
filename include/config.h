@@ -151,6 +151,13 @@
  *		playground.
  */
 
+/* 
+ * If this is defined, allow loading saves from other versions of
+ * nethack with different options.  Beware! On a public system, this
+ * could allow users to cheat!
+ */
+#define ALLOW_LOADING_FROM_DIFFERENT_VERSIONS 
+
 #ifndef WIZARD		/* allow for compile-time or Makefile changes */
 # ifndef KR1ED
 #  define WIZARD  "wizard" /* the person allowed to use the -D option */

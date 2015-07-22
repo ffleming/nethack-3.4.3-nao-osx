@@ -93,7 +93,12 @@ boolean complain;
 	    if (complain)
 		pline("Configuration incompatibility for file \"%s\".",
 		      filename);
-	    return FALSE;
+#ifdef ALLOW_LOADING_FROM_DIFFERENT_VERSIONS
+    pline("But that's OK");  
+      return TRUE;
+#else
+      return FALSE;
+#endif
 	}
 	return TRUE;
 }
