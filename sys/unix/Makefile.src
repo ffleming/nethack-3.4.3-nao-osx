@@ -596,7 +596,7 @@ ioctl.o: ../sys/share/ioctl.c $(HACK_H) ../include/tcap.h
 	$(CC) $(CFLAGS) -c ../sys/share/ioctl.c
 unixtty.o: ../sys/share/unixtty.c $(HACK_H)
 	$(CC) $(CFLAGS) -c ../sys/share/unixtty.c
-unixmain.o: ../sys/unix/unixmain.c $(HACK_H) ../include/dlb.h
+unixmain.o: ../sys/unix/unixmain.c $(HACK_H) ../include/dlb.h ../include/date.h
 	$(CC) $(CFLAGS) -c ../sys/unix/unixmain.c
 unixunix.o: ../sys/unix/unixunix.c $(HACK_H)
 	$(CC) $(CFLAGS) -c ../sys/unix/unixunix.c
