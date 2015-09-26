@@ -46,7 +46,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
 +---- Michael Deutschmann <michael@talamasca.ocis.net>
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/README.md nethack-3.4.3-nao-osx/README.md
 --- nethack-3.4.3/README.md	1969-12-31 16:00:00.000000000 -0800
-+++ nethack-3.4.3-nao-osx/README.md	2015-07-22 11:00:45.000000000 -0700
++++ nethack-3.4.3-nao-osx/README.md	2015-09-26 00:48:59.000000000 -0700
 @@ -0,0 +1,181 @@
 +NetHack 3.4.3, NAO version, for OSX
 +===
@@ -781,7 +781,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  #endif /* COLOR_H */
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/include/config.h nethack-3.4.3-nao-osx/include/config.h
 --- nethack-3.4.3/include/config.h	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/include/config.h	2014-12-31 16:40:27.000000000 -0800
++++ nethack-3.4.3-nao-osx/include/config.h	2015-09-26 00:48:59.000000000 -0700
 @@ -43,11 +43,21 @@
   * Some combinations make no sense.  See the installation document.
   */
@@ -14155,7 +14155,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  	    getlin("\"Hello stranger, who are you?\" -", buf);
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/src/version.c nethack-3.4.3-nao-osx/src/version.c
 --- nethack-3.4.3/src/version.c	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/src/version.c	2014-12-31 16:33:06.000000000 -0800
++++ nethack-3.4.3-nao-osx/src/version.c	2015-09-26 00:48:59.000000000 -0700
 @@ -93,7 +93,12 @@ boolean complain;
  	    if (complain)
  		pline("Configuration incompatibility for file \"%s\".",
@@ -14524,7 +14524,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  # manual installation for most BSD-style systems
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/Makefile.src nethack-3.4.3-nao-osx/sys/unix/Makefile.src
 --- nethack-3.4.3/sys/unix/Makefile.src	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/sys/unix/Makefile.src	2015-07-22 11:40:20.000000000 -0700
++++ nethack-3.4.3-nao-osx/sys/unix/Makefile.src	2015-09-26 00:48:59.000000000 -0700
 @@ -44,7 +44,7 @@ LINK=$(CC)
  # for UNIX systems
  SYSSRC = ../sys/share/ioctl.c ../sys/share/unixtty.c ../sys/unix/unixmain.c \
@@ -14666,7 +14666,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  vision.o: vision.c $(HACK_H) ../include/vis_tab.h
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/Makefile.top nethack-3.4.3-nao-osx/sys/unix/Makefile.top
 --- nethack-3.4.3/sys/unix/Makefile.top	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/sys/unix/Makefile.top	2014-12-24 11:21:20.000000000 -0800
++++ nethack-3.4.3-nao-osx/sys/unix/Makefile.top	2015-09-26 00:50:55.000000000 -0700
 @@ -14,18 +14,17 @@
  # MAKE = make
  
@@ -14678,7 +14678,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
 -GAMEUID  = games
 -GAMEGRP  = bin
 +GAMEUID  = root
-+GAMEGRP  = admin
++GAMEGRP  = staff
  
  # Permissions - some places use setgid instead of setuid, for instance
  # See also the option "SECURE" in include/config.h
@@ -14786,7 +14786,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
  # and similar systems, they may differ
 diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile -rupN nethack-3.4.3/sys/unix/unixmain.c nethack-3.4.3-nao-osx/sys/unix/unixmain.c
 --- nethack-3.4.3/sys/unix/unixmain.c	2003-12-07 15:39:13.000000000 -0800
-+++ nethack-3.4.3-nao-osx/sys/unix/unixmain.c	2015-07-22 11:40:20.000000000 -0700
++++ nethack-3.4.3-nao-osx/sys/unix/unixmain.c	2015-09-26 01:00:39.000000000 -0700
 @@ -6,6 +6,7 @@
  
  #include "hack.h"
@@ -14827,7 +14827,7 @@ diff --exclude='.git*' --exclude='*.diff' --exclude='*.patch' --exclude=Makefile
 +    if(strncmp(argv[i], "--version", 9) == 0) {
 +      printf("%s\n", VERSION_ID);
 +      printf("nao-osx v1.1\n");
-+      printf("http://github.com/ffleming/nethack-3.4.3-nao-osx/releases/tag/v1.1\n");
++      printf("http://github.com/ffleming/nethack-3.4.3-nao-osx/releases/tag/v1.2\n");
 +      exit(EXIT_SUCCESS);
 +    }
 +  }
