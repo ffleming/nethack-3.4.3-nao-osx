@@ -9,7 +9,15 @@ The purpose of this repository is to allow a more playable (i.e. heavily patched
 ```
 % brew install nethack
 ```
-Until then, however...
+Until then, you'll need to tap my repository of formulae with
+
+```
+% brew tap ffleming/formulae
+```
+and then install nethack with
+```
+% brew install nethack-nao
+```
 
 Manual installation
 ---
