@@ -5,11 +5,7 @@ This repository contains a fork of the [nethack.alt.org](http://nethack.alt.org)
 
 Automated installation
 ---
-The purpose of this repository is to allow a more playable (i.e. heavily patched, but not in a play-altering way) version of Nethack to be easily installed via the Homebrew package manager.  If my (forthcoming) PR is accepted, installation will be as simple as
-```
-% brew install nethack
-```
-Until then, you'll need to tap my repository of formulae with
+The purpose of this repository is to allow a more playable (i.e. heavily patched, but not in a play-altering way) version of Nethack to be easily installed via the Homebrew package manager. Tap my repository of formulae with
 
 ```
 % brew tap ffleming/formulae
